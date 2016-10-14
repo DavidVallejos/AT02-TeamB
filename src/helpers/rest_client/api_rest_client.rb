@@ -6,7 +6,6 @@ require_relative '../config/configuration'
 require_relative '../data_helper'
 
 # noinspection ALL
-
 class ApiRestClient
   def initialize
     @config = Configuration.new
@@ -23,7 +22,7 @@ class ApiRestClient
     rescue RestClient::ExceptionWithResponse => err
       response = err.response
     end
-
+    response.code
     body = JSON.parse(response.body.to_s)
     [response.code, body]
   end
@@ -36,7 +35,7 @@ class ApiRestClient
       rescue RestClient::ExceptionWithResponse => err
         response = err.response
     end
-
+    response.code
     body = JSON.parse(response.body.to_s)
     [response.code, body]
   end
@@ -49,7 +48,7 @@ class ApiRestClient
     rescue RestClient::ExceptionWithResponse => err
       response = err.response
     end
-
+    response.code
     body = JSON.parse(response.body.to_s)
     [response.code, body]
   end

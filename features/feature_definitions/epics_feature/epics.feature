@@ -1,5 +1,5 @@
 @api_test
-Feature: Epic Tests
+Feature: Epic Smoke Tests
 
   @smoke @post @epic
   Scenario: Epic create
@@ -22,7 +22,7 @@ Feature: Epic Tests
      Scenario: Epics get
      Given I have set a connection to pivotal_tracker API service
      And I have a ProjectEpicTest project
-     Then I want to get all epics in the project
+     Then I want to get all epics in this project
      When I sending a GET request to epics endpoint
      Then I expect Status code 200 for the Test
 
@@ -41,3 +41,4 @@ Feature: Epic Tests
     Then I want to get an epic with the name EpicTest
     When I sending GET request to epics endpoint
     Then I expect Status code 200 for the Test
+
