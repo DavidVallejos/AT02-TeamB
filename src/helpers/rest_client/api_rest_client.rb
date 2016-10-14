@@ -7,7 +7,7 @@ require_relative '../data_helper'
 
 # noinspection ALL
 
-class RubyRestTeamB
+class ApiRestClient
   def initialize
     @config = Configuration.new
     @base_url = @config.get('url')
