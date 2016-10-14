@@ -13,5 +13,5 @@ end
 And(/^I expect numbers of characters are (\d+)$/) do |number|
   number_characters = @response['name'].length
   expect(number.to_i).to eql(number_characters)
-  _, _ = @client.delete_request('projects/' + @project_id)
+  @client.delete_request('projects/' + @project_id)
 end
